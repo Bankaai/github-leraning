@@ -1,0 +1,46 @@
+Commands and Explanations
+git checkout -b main origin/main
+
+Explanation: Creates a new local branch named main that tracks the remote main branch from origin and switches to it.
+git push origin main
+
+Explanation: Pushes the local main branch to the remote repository named origin. If the branch does not exist on the remote, it will be created.
+git branch
+
+Explanation: Lists all local branches in your repository. The current branch is marked with an asterisk *.
+git branch -r
+
+Explanation: Lists all remote branches that your local repository is aware of. These are branches that exist on the remote repository.
+git branch -a
+
+Explanation: Lists all branches, both local and remote.
+git branch --unset-upstream
+
+Explanation: Removes the tracking relationship between the current local branch and its upstream remote branch. The local branch will no longer be set to track a remote branch.
+git remote set-url origin https://<TOKEN>@github.com/Bankaai/github-leraning.git
+
+Explanation: Updates the remote URL for the origin repository to include the Personal Access Token (PAT) for authentication.
+git status
+
+Explanation: Shows the status of the working directory and staging area, including any changes that are staged for commit, changes that are not yet staged, and files that are not being tracked.
+git add file.js
+
+Explanation: Stages the file file.js for commit. It prepares the file to be included in the next commit.
+git commit -m "Add file.js"
+
+Explanation: Commits the staged changes with a commit message "Add file.js". This records the changes to the repository's history.
+git fetch
+
+Explanation: Fetches updates from the remote repository but does not merge them into the current branch. It updates your local copy of the remote branches.
+git pull
+
+Explanation: Fetches and merges updates from the remote repository into the current branch. It combines git fetch and git merge.
+git branch -d feature-branch
+
+Explanation: Deletes the local branch named feature-branch. The branch must be fully merged into its upstream branch or have no commits of its own to be deleted.
+git push origin --delete feature-branch
+
+Explanation: Deletes the remote branch named feature-branch on the origin repository.
+git config --global credential.helper manager-core (Windows) or git config --global credential.helper osxkeychain (macOS) or git config --global credential.helper store (Linux)
+
+Explanation: Configures Git to use a credential helper to securely store and manage credentials for accessing remote repositories.
